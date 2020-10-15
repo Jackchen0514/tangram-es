@@ -1,0 +1,1801 @@
+Author: Geraldine Sarmiento, Nathaniel V. Kelso, Patricio Gonzalez Vivo, Brett Camper, Peter Richardson
+
+import:
+    - themes/maps-icons.yaml
+    - themes/walkabout-icons.yaml
+    - themes/label-5.yaml
+
+global:
+    feature_order: function () { return feature.sort_rank | 0; }
+    #
+    # SHIELDS
+    sdk_shield_color: black
+    sdk_shield_text_color: white
+    #
+    # enable interactivity for key features
+    sdk_interactive: true
+    #
+    # default order for basemap features
+    #    feature_order: function() { return feature.sort_rank; }
+    sdk_building_extrude: true              # building extrusion toggle
+    #
+    text_font_family:   'Open Sans'             # branding in asperational Unicode, yo (or Helvetica)
+#    /* 1.BASEMAP */
+
+    color_white: '#ffffff'
+    color_background: '#f2f1f0'
+
+#    /* 2.BOUNDARY */
+
+    color_border_country: '#63635C'
+    color_border_region: '#73726B'
+
+#    /* 3.NATURAL */
+#    /* 3.1 Main natural */
+
+    color_glacier: '#FFFFFF'
+    color_water: '#aad9ff'
+    color_river: '#36B0BF'
+    color_wetland: '#b9e5bb'
+    color_beach: '#f2f1f0'
+
+#    /*3.2 Vegeration*/
+
+    color_forest: '#bae5bb'
+    color_green0: '#b9e5bb'
+    color_green1: '#b9e5bb'
+    color_green2: '#b9e5bb'
+    color_green3: '#b9e5bb'
+    color_green4: '#b9e5bb'
+    color_green5: '#b9e5bb'
+    color_green6: '#b9e5bb'
+
+#    /* 4.LANDUSE */
+#    /*4.1 Main landuse*/
+
+    color_pedestrian_area: '#eae8e8'
+    color_pedestrian_area_light: '#eae8e8'
+    color_university: '#F8E4BA'
+    color_hospital: '#F8D9D9'
+    color_industrial: '#E4E2EB'
+    color_sport: '#bae5bb'
+    color_parking: '#eae8e8'
+    color_military: '#E53935'
+
+#    /*4.2 Aerodrome*/
+
+    color_aerodrome0: '#D4BFF2'
+    color_aerodrome1: '#D4BFF2'
+    color_aerodrome2: '#D1C0EB'
+    color_aerodrome3: '#CFC1E8'
+    color_aerodrome4: '#CDC0E3'
+    color_aerodrome5: '#C8BCDE'
+
+#    /* 4.3 Barriers */
+    color_fence: '#999999'
+
+#    /* 4.4 Buildings */
+
+    color_building: '#ffffff'
+    color_building_dark: '#ffffff'
+    color_building_border: '#A1A096'
+    color_building_dark_border: '#9B9A8F'
+
+#    /* 5.ROADS */
+#    /* 5.1 All roads */
+
+    color_trunk: '#FF8800'
+    color_trunk_orange: '#ffeba1'
+    color_trunk_orange_medium: '#ffeba1'
+    color_trunk_orange_light: '#ffeba1'
+    color_primary_orange:  '#ffeba1'
+    color_primary_orange_medium: '#ffeba1'
+    color_primary_orange_light: '#ffeba1'
+    color_secondary: '#FFFFFF'
+    color_residential: '#FCFCFC'
+    color_unclassified: '#FCFCFC'
+    color_pedestrian: '#FCFCFC'
+    color_footway: '#F8F8F8'
+    color_cycleway: '#FF87AD'
+    color_construction: '#BBBBAA'
+    color_track: '#635730'
+    color_bridleway: '#3D361E'
+
+#    /* 5.2 Bridges */
+
+    color_bridge_background: '#ffffff'
+    color_bridge_casing: '#808080'
+
+#    /* 5.3 Tunnels */
+
+    color_trunk_tunnel_orange: '#ffeba1'
+    color_trunk_tunnel_casing: '#808080'
+    color_primary_tunnel_orange: '#ffeba1'
+    color_primary_tunnel_casing: '#ffffff'
+    color_secondary_tunnel: '#FFFFFF'
+    color_secondary_tunnel_casing:  '#808080'
+    color_tertiary_tunnel: '#FFFFFF'
+    color_tertiary_tunnel_casing:  '#808080'
+    color_unclassified_tunnel: '#FFFFFF'
+    color_unclassified_tunnel_casing: '#808080'
+
+#    /* 5.4 Piste */
+
+    color_piste: '#C47AFF'
+    color_piste_novice: '#5feb2e'
+    color_piste_easy: '#0b27fb'
+    color_piste_intermadiate: '#fc0e1b'
+    color_piste_expert: '#220625'
+    color_piste_advanced: '#0a0a0d'
+
+#    /* 5.5 Transport */
+
+    color_railway_light: '#B2B1A2'
+    color_railway: '#969586'
+    color_railway_dash: '#EEEEEE'
+    color_railway_tunnel: '#808080'
+    color_aerialway: '#444444'
+    color_tram: '#7A7A7A'
+    color_ferry: '#4499Bb'
+
+#    /* 6.LABELS COLORS */
+#    /* 6.1 Main labels */
+    color_label_dark: '#222222'
+    color_label_medium: '#333333'
+    color_label_light: '#444444'
+    color_label_halo_medium: '#EDEBDB'
+    color_label_halo_light: '#FFFFFF'
+
+#    /* 6.2 Natural labels */
+
+    color_water_label: '#4499Bb'
+    color_park_label: '#3A7921'
+    color_halo_park_label: '#FFFFFF'
+
+#    /* 6.3 Place labels */
+
+    color_city_label: '#666666'
+    color_country_label: '#8C8C8C'
+    color_state_label: '#8C8C8C'
+    color_district_label: '#7F7F7F'
+    color_housename: '#65655E'
+    color_building_label: '#61615A'
+    color_poi_label: '#444444'
+    color_subway_label: '#333333'
+
+#    /* 6.4 Road labels */
+
+    color_road_label_halo: '#FFFFFF'
+    color_shield_text: '#000000'
+    color_shield_text_halo: '#000000'
+    color_shield: '#FFFFFF'
+    color_shield_outline: '#000000'
+#    /* blue - #2E89B0 #687E94 #598DBE */
+
+#    /* 7.ISOLINES COLORS */
+
+    color_isoline1000: '#6c6960'
+    color_isoline500: '#6c6960'
+    color_isoline100: '#6c6960'
+    color_isoline50: '#7a7666'
+    color_isoline10: '#7a7666'
+
+    color_label_isoline1000: '#6c6960'
+    color_label_isoline500: '#6c6960'
+    color_label_isoline100: '#6c6960'
+    color_label_isoline50: '#7a7666'
+    color_label_isoline10: '#7a7666'
+
+fonts:
+    Open Sans:
+        -   weight: 400
+            url: https://fonts.gstatic.com/s/opensans/v13/wMws1cEtxWZc6AZZIpiqWALUuEpTyoUstqEm5AMlJo4.woff
+        -   weight: 400
+            style: italic
+            url: https://fonts.gstatic.com/s/opensans/v13/O4NhV7_qs9r9seTo7fnsVLO3LdcAZYWl9Si6vvxL-qU.woff
+
+scene:
+    background:
+        color: '#f2f1f0'
+
+cameras:
+    iso-camera:
+        # Manhattan
+        position: [54.43693, 24.430089, 16]
+        type: isometric
+        axis: [0, 1]
+        active: false
+    perspective-camera:
+        # Manhattan
+        position: [54.43693, 24.430089, 16]
+        type: perspective
+        fov: 45
+        max_tilt: [[2, 0], [16, 90]]
+        active: true
+
+#lights: ~
+#  light1:
+#    type: directional
+#    origin: world
+#    direction: [1, 1, -1]
+#    diffuse: [.3, .3, .3, 1.]
+#    ambient: [0.7, 0.7, 0.7, 1.]
+
+textures:
+    building-grid:
+        color: white
+        filtering: mipmap
+    quest_dot:
+        url: images/quest_dot@2x.png
+        filtering: mipmap
+        density: 5
+
+styles:
+    heightglow:
+        base: polygons
+        lighting: vertex
+        shaders:
+            blocks:
+                color: "color.rgb += vec3(worldPosition().z / 800.);"
+    heightglowline:
+        base: lines
+        mix: heightglow
+    quest-dots:
+        base: points
+        texture: quest_dot
+        blend: overlay
+        blend_order: 1
+    transit-lines:
+        base: lines
+        blend: overlay
+        blend_order: -2
+        shaders:
+            blocks:
+                filter: |
+                    color.rgb *= 1.25; // pump up the colors
+                    color.a = 0.5;     // translucent
+    dashed:
+        base: lines
+        dash: [1.25, 1.25]
+        dash_background_color: [0.808,0.860,0.851]
+    dashed_big:
+        base: lines
+        dash: [2.0, 1.0]
+        dash_background_color: [0.808,0.860,0.851]
+    dashed_steps:
+        base: lines
+        dash: [0.5, 0.5]
+        dash_background_color: [0.867, 0.867, 0.867]
+    tools-tilecoords:
+        shaders:
+            blocks:
+                global: |
+                    // Varying to be added to both vertex and fragment shaders
+                    varying vec2 v_pos;
+                    #ifdef TANGRAM_FRAGMENT_SHADER
+                    vec2 TileCoords() {
+                        return fract(v_pos);
+                    }
+                    #endif
+                position: |
+                    v_pos = modelPosition().xy;
+    tools-aastep:
+        shaders:
+            extensions: OES_standard_derivatives
+            blocks:
+                global: |
+                    float aastep(float threshold, float value) {
+                        #ifdef TANGRAM_FRAGMENT_SHADER
+                            #ifdef TANGRAM_EXTENSION_OES_standard_derivatives
+                                float afwidth = length(vec2(dFdx(value), dFdy(value))) * 0.70710678118654757;
+                                return smoothstep(threshold - afwidth, threshold + afwidth, value);
+                            #else
+                                return step(threshold, value);
+                            #endif
+                        #else
+                            return step(threshold, value);
+                        #endif
+                    }
+    tools-grid:
+        mix: tools-tilecoords
+        shaders:
+            blocks:
+                global: |
+                    #ifdef TANGRAM_FRAGMENT_SHADER
+                    bool grid(vec2 st, float res, float press) {
+                        vec2 grid = fract(st * res);
+                        return (grid.x < res * press) || (grid.y < res * press);
+                    }
+                    float TileGrid(float res) {
+                        vec2 st = TileCoords() * 100. * res;
+                        float pct = 0.0;
+                        float press = 0.4 + (1.0 - fract(u_map_position.z)) * 0.1;
+                        if (grid(st, 0.01, press)) { pct += 0.5; }
+                        if (grid(st, 0.1, press)) { pct += 0.15; }
+                        return pct;
+                    }
+                    float TileGrid() {
+                        return mix(TileGrid(1.), TileGrid(2.), fract(u_map_position.z));
+                    }
+                    #endif
+    grid:
+        base: polygons
+        mix: [tools-grid]
+        shaders:
+            blocks:
+                filter: |
+                    color.rgb = vec3(0.899, 0.95, 1.0);
+                    color.rgb = mix(color.rgb, vec3(0.654,0.856,0.896), TileGrid());
+    water_border:
+        base: lines
+        texcoords: true
+        mix: tools-aastep
+        shaders:
+            blocks:
+                global: |
+                    float pulse(float x, float p, float w) {
+                        x = abs(x - p);
+                        if (x > w) { return 0.0; }
+                        x /= w;
+                        return (1.0 - x * x * (3.0 - 2.0 * x));
+                    }
+                width: |
+                    // Comment/Uncomment to fix the line to the border
+                    width *= 1.0 - v_texcoord.x;
+                color: |
+                    vec2 st = v_texcoord.xy;
+                    float pattern = aastep(.5, pulse(st.x, .75, .15) + pulse(st.x, .4, .10) + pulse(st.x, .1, .1));
+                    color.rgb = mix(color.rgb, vec3(0.675,0.855,0.886), pattern);
+    shapes-circle:
+        shaders:
+            blocks:
+                global: |
+                    // get distance field of a Circle
+                    // ================================
+                    float circleDF (vec2 st) {
+                        return dot(st,st);
+                    }
+
+    tiling-brick:
+        shaders:
+            blocks:
+                global: |
+                    // Repeats a coordinate space (st) in diferent brick-like tiles
+                    // ================================
+                    vec2 brick(vec2 st, float zoom){
+                        st *= zoom;
+                        // Here is where the offset is happening
+                        st.x += step(1., mod(st.y, 2.0)) * 0.5;
+                        return fract(st);
+                    }
+    pattern-dots:
+        mix: [tools-tilecoords, tiling-brick, shapes-circle, tools-aastep]
+        shaders:
+            blocks:
+                global: |
+                    #ifdef TANGRAM_FRAGMENT_SHADER
+                        float TileDots(float scale, float size) {
+                            vec2 tc = TileCoords() * scale * pow(2., floor(u_map_position.z) - abs(u_tile_origin.z));
+                            vec2 IN = brick(tc, 2.);
+                            float A = circleDF(vec2(0.5) - IN) * 1.8;
+                            float d = 0.0;
+                            if (u_map_position.z < 18.) {
+                                vec2 OUT = fract(tc * 2.);
+                                float B = circleDF(vec2(0.25) - OUT) * 7.;
+                                B = min(B, circleDF(vec2(0.75, 0.25) - OUT) * 7.);
+                                B = min(B, circleDF(vec2(0.50, 0.75) - OUT) * 7.);
+                                B = min(B, circleDF(vec2(0.00, 0.75) - OUT) * 7.);
+                                B = min(B, circleDF(vec2(1.00, 0.75) - OUT) * 7.);
+                                d = mix(A, B, pow(fract(u_map_position.z), 10.));
+                            } else {
+                                d = A;
+                            }
+                            return aastep(size, d);
+                        }
+                    #endif
+    dots:
+        base: polygons
+        mix: pattern-dots
+        shaders:
+            blocks:
+                color: |
+                    color.rgb = mix(color.rgb, vec3(0.850), TileDots(45., 0.1));
+                    // size was set to 35 previously, now 45
+
+    dots-rev:
+        base: polygons
+        mix: pattern-dots
+        shaders:
+            blocks:
+                color: |
+                    color.rgb = mix(vec3(0.850), color.rgb, TileDots(45., .21));
+
+    # HSV/RGB functions
+    hsv:
+        shaders:
+            blocks:
+                global: |
+                    vec3 rgb2hsv(vec3 c)
+                    {
+                        vec4 K = vec4(0.0, -1.0 / 3.0, 2.0 / 3.0, -1.0);
+                        vec4 p = mix(vec4(c.bg, K.wz), vec4(c.gb, K.xy), step(c.b, c.g));
+                        vec4 q = mix(vec4(p.xyw, c.r), vec4(c.r, p.yzx), step(p.x, c.r));
+                        float d = q.x - min(q.w, q.y);
+                        float e = 1.0e-10;
+                        return vec3(abs(q.z + (q.w - q.y) / (6.0 * d + e)), d / (q.x + e), q.x);
+                    }
+                    vec3 hsv2rgb(vec3 c)
+                    {
+                        vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+                        vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
+                        return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
+                    }
+
+    scale-buildings:
+        shaders:
+            blocks:
+                position: |
+                    // scale buildings based on zoom
+                    float zoom = u_map_position.z;
+                    float min = .1;       // minimum building scale
+                    float midpoint = 16.; // middle of zoom range
+                    float inspeed = .1;   // number of zooms to scale buildings up
+                    float outspeed = 2.;  // number of zooms to scale buildings back down
+                    float e = 0.;
+
+                    if (zoom >= midpoint) {
+                        e = (zoom - midpoint) / (outspeed * .2);
+                    } else {
+                        e = abs(zoom - midpoint) / inspeed;
+                    }
+                    position.z *= ((1. - min) / (1. + (exp(e)))) + min;
+
+    building-grid:
+        base: polygons
+        lighting: false
+        mix: [hsv, scale-buildings]
+        texcoords: true
+        shaders:
+            uniforms:
+                u_tex_grid: building-grid
+            defines:
+                WALL_TINT: vec3(1., 3., .800)
+            blocks:
+                color: |
+                    if (dot(vec3(0., 0., 1.), worldNormal()) < .5) {
+                        // If it's a wall
+                        color.rgb = hsv2rgb(rgb2hsv(color.rgb) * WALL_TINT);
+                        color.rgb = mix(color.rgb, vec3(0.),
+                                        texture2D(u_tex_grid, v_texcoord).a);
+                    }
+
+    building-lines:
+        base: lines
+        mix: scale-buildings
+    lines_transparent:
+        base: lines
+        blend: overlay
+    outline_transparent:
+        base: lines
+        blend: overlay
+    polygons_transparent:
+        base: polygons
+        blend: overlay
+    text-blend-order:
+        base: text
+        blend_order: 1
+    ux-route-line-overlay:
+        base: lines
+        blend: overlay
+        blend_order: 0
+    ux-route-line-dash-overlay:
+        base: lines
+        blend: overlay
+        blend_order: 0
+        dash: [1, 1]
+    ux-transit-line-overlay:
+        base: lines
+        blend: overlay
+        blend_order: 0
+    ux-location-gem-overlay:
+        base: points
+        texture: mapzen_icon_library
+        blend: overlay
+        blend_order: 2
+    ux-icons-overlay:
+        base: points
+        texture: maps_icon_library
+        blend: overlay
+        blend_order: 3
+    sdk-point-overlay:
+        base: points
+        texture: mapzen_icon_library
+        blend: overlay
+        blend_order: 3
+    sdk-shield-overlay:
+        base: points
+        texture: mapzen_icon_library
+        blend: overlay
+        blend_order: 3
+    sdk-line-overlay:
+        base: lines
+        blend: overlay
+        blend_order: 0
+    sdk-polygon-overlay:
+        base: polygons
+        blend: overlay
+        blend_order: 0
+
+
+sources:
+    osm:
+        type: MVT
+        url: https://tiles.gomap.ae/data/v3/{z}/{x}/{y}.pbf
+        max_zoom: 18
+    # Only enable this for local debug, should not be enabled for prod (app inserts these at runtime)
+    # These are all in San Francisco, California
+    #
+    # Current location gem
+    # ------------------    去除 markers, 规划路线, 起始, 结束点 等参考示例 ---------------------------
+    #mz_current_location:
+        #type: GeoJSON
+        #url: https://gist.githubusercontent.com/anonymous/9e9588228b0a604264a2/raw/b28be49bea0b7feb859eb65b588c28e9fee5ae2c/map.geojson
+    # Route line
+        #mz_route_line:
+        #type: GeoJSON
+        # sf to ny
+        # url: https://gist.githubusercontent.com/anonymous/30c6c1a75c168d91d90c/raw/92bfe55e622766d250b1f2f5d17bdc7c26acb956/map.geojson
+        # local sf trip
+        #url: https://gist.githubusercontent.com/anonymous/9a610ebda6fe4be7bccc/raw/8d217e43f2412d48d01534ba115f1e42dac72e68/map.geojson
+    # Dashed route line
+        #mz_route_line_dash:
+        #type: GeoJSON
+        #url: https://gist.githubusercontent.com/anonymous/d73b851c64c3e5fbfc2754aa32f44c10/raw/938ae435776e176919c4797bed1465a92e403ef3/map.geojson
+    # Transit route line
+        #mz_route_line_transit:
+        #type: GeoJSON
+        #url: https://gist.githubusercontent.com/anonymous/71ae88cbc6d62c4d141ecd6a61060050/raw/2254bbc18243f5dc609e663a580c9412a7447936/map.geojson
+    # Pin at start of route
+        #mz_route_start:
+        #type: GeoJSON
+        #url: https://gist.githubusercontent.com/anonymous/5262969cb7549ea69221/raw/be03f233fa323d9b5cf50ef1d8e89a1faa3750f1/map.geojson
+    # Pin at end of route
+        #mz_route_destination:
+        #type: GeoJSON
+        #url: https://gist.githubusercontent.com/anonymous/dbae9635dfe46796490e/raw/df55c318635a7d91b309ed40754d4738a292fd38/map.geojson
+    # Arrow for current route location
+        #mz_route_location:
+        #type: GeoJSON
+        #url: https://gist.githubusercontent.com/anonymous/36613092be6e2aa004fd/raw/f753d13069425199e1dea1b449ef67d723f6510e/map.geojson
+    # Dots for transit stops in route preview
+        #mz_route_transit_stop:
+        #type: GeoJSON
+        #url: https://gist.githubusercontent.com/anonymous/b9f16bca4a804f50faf71277d52ee4ab/raw/db13e4e765fa1ac8844b8ba02f4a0f66fe772907/map.geojson
+    # Pins showing search result locations
+        #mz_search_result:
+        #type: GeoJSON
+        #url: https://gist.githubusercontent.com/anonymous/57dc09eeb120919f76de/raw/43426217da3c2bae0522dc4257aaa61e4df3981e/map.geojson
+    # Default point styling (SDK)
+        #mz_default_point:
+        #type: GeoJSON
+        #url: https://gist.githubusercontent.com/anonymous/16324c771edfce45be0721390389b878/raw/7dbaebf17da7da8562e6c6f8768bc8cff83efa88/map.geojson
+    # Default shield styling (SDK)
+        #mz_default_shield:
+        #type: GeoJSON
+        #url: https://gist.githubusercontent.com/nvkelso/3c08dba1eced4d01df98c1a9a7801162/raw/d83a5a396fc7b22309b8ca89336ad2dcfff6c452/map.geojson
+    # Default line styling (SDK)
+        #mz_default_line:
+        #type: GeoJSON
+        #url: https://gist.githubusercontent.com/anonymous/26f4e8b6b34b2617b5d5533d89decb39/raw/df8e180ab4f7f19448014dccc4a755f7cfa20003/map.geojson
+    # Default polygon styling (SDK)
+        #mz_default_polygon:
+        #type: GeoJSON
+        #url: https://gist.githubusercontent.com/anonymous/88235c795bb44b8c45150bdd5561f947/raw/71d4fab97b6513833bf1a589167119e6169ef86d/map.geojson
+
+
+layers:
+    # Map overlays for styling the server response (using special source layer names) for route line, current location, and search result pins
+    mz_route_line:
+        data: { source: mz_route_line }
+        draw:
+            ux-route-line-overlay:
+                interactive: global.sdk_interactive
+                color: '#0087FF'
+                order: 1200
+                priority: 1
+                cap: butt
+                width: [[0,1px],[5,1.5px],[9,2px],[10,3px],[11,4px],[13,5px],[14,6px],[15,7px],[16,8px],[17,9px],[18,10px]]
+                outline:
+                    color: [[16, '#ffffff'], [18, '#ffffff']]
+                    width: 1
+                    order: 352 # put all outlines below all roads
+
+        arrows:
+            # oneway arrows and shields are distinct groups!
+            filter: { $zoom: { min: 16 } }
+            draw:
+                arrows:
+                    style: base_icons_library
+                    flat: true
+                    priority: 3
+                    order: 1201
+                    visible: global.icon_visible_arrows
+                    sprite: arrow
+                    color: [0.800,0.800,0.800]
+                    size: [[17, 6px], [20, 14px]]
+                    placement: spaced
+                    placement_spacing: [[17, 70px], [20, 175px]]
+                    angle: auto
+                    text:
+                        visible: false
+
+    mz_route_line_dash_start:
+        data: { source: mz_route_line_dash_start }
+        draw:
+            ux-route-line-dash-overlay:
+                interactive: global.sdk_interactive
+                color: '#aaaaaa'
+                order: 500
+                width: [[2,2px],[5,2.5px],[11,3px],[16,7px],[17,9px]]
+
+    mz_route_line_dash_end:
+        data: { source: mz_route_line_dash_end }
+        draw:
+            ux-route-line-dash-overlay:
+                interactive: global.sdk_interactive
+                color: '#aaaaaa'
+                order: 500
+                width: [[2,2px],[5,2.5px],[11,3px],[16,7px],[17,9px]]
+
+    mz_route_line_transit:
+        data: { source: mz_route_line_transit }
+        draw:
+            ux-transit-line-overlay:
+                # each transit route segment could be a different 'line' each with it's own color
+                # but some transit lines don't define a color, in those cases default to blue
+                # and since the color is coming from Transit.land they call it 'color' instead of 'colour'
+                interactive: global.sdk_interactive
+                color: function() { return feature.color || '#06a6d4'; }
+                order: 500
+                width: [[0,3.5px],[5,5px],[9,7px],[10,6px],[11,6px],[13,8px],[14,9px],[15,10px],[16,11px],[17,12px],[18,10px]]
+
+    mz_current_location_gem:
+        data: { source: mz_current_location }
+        draw:
+            ux-location-gem-overlay:
+                order: 1000
+                interactive: global.sdk_interactive
+                sprite: current_place
+                size: 36px
+                collide: false
+                transition: { show: { time: 0s }, hide: { time: 0s } }
+
+#    mz_current_location_gem:
+#        data: { source: mz_current_location }
+#        pins:
+#            filter: { $zoom: { min: 14 } }
+#            draw:
+#                quest-icons:
+#                    interactive: true
+#                    priority: function() { return feature.order }
+#                    size: 66px
+#                    sprite: function() { return feature.kind }
+#                    sprite_default: quest
+#                    offset: [-17px, -66px]
+#        dots_no_collide:
+#            filter: { $zoom: { min: 16 } }
+#            draw:
+#                quest-dots:
+#                    size: 16px
+#                    collide: false
+#                    offset: [-2.5px, -22px]
+#        dots:
+#            filter: { $zoom: { min: 13, max: 15.999 } }
+#            draw:
+#                quest-dots:
+#                    size: 16px
+#                    collide: true
+#                    offset: [-2.5px, -22px]
+    mz_route_location:
+        data: { source: mz_route_location }
+        draw:
+            ux-location-gem-overlay:
+                interactive: global.sdk_interactive
+                sprite: ux-route-arrow
+                size: [60px,60px]
+                collide: false
+                transition: { show: { time: 0s }, hide: { time: 0s } }
+    mz_route_start:
+        data: { source: mz_route_start }
+        draw:
+            ux-icons-overlay:
+                interactive: global.sdk_interactive
+                priority: 1
+                sprite: route-point-start
+                size: [36px,36px]
+                collide: false
+                anchor: top
+                transition: { show: { time: 0s }, hide: { time: 0s } }
+    mz_route_destination:
+        data: { source: mz_route_destination }
+        draw:
+            ux-icons-overlay:
+                interactive: global.sdk_interactive
+                priority: 1
+                sprite: route-point-finish
+                size: [36px,36px]
+                collide: false
+                anchor: top
+                transition: { show: { time: 0s }, hide: { time: 0s } }
+    mz_route_transit_stop:
+        data: { source: mz_route_transit_stop }
+        draw:
+            ux-icons-overlay:
+                interactive: global.sdk_interactive
+                sprite: route-point-a
+                size: [36px,36px]
+                collide: false
+                transition: { show: { time: 0s }, hide: { time: 0s } }
+    mz_search_result:
+        data: { source: mz_search_result }
+        draw:
+            ux-icons-overlay:
+                interactive: global.sdk_interactive
+                sprite: search-result
+                size: [36px,36px]
+                collide: false
+                anchor: top
+                transition: { show: { time: 0s }, hide: { time: 0s } }
+        inactive:
+            filter: { state: inactive }
+            draw:
+                ux-icons-overlay:
+                    sprite: coloredmark-inactive
+    mz_dropped_pin:
+        data: { source: mz_dropped_pin }
+        draw:
+            ux-icons-overlay:
+                interactive: global.sdk_interactive
+                sprite: search-result
+                size: [36px,36px]
+                collide: false
+                anchor: top
+                transition: { show: { time: 0s }, hide: { time: 0s } }
+
+    # Used by the SDK to place point, line, and polygon overlays on the map
+    mz_default_point:
+        data: { source: mz_default_point }
+        draw:
+            sdk-point-overlay:
+                interactive: global.sdk_interactive
+                sprite: ux-search-active
+                size: [36px,54px]
+                collide: false
+                anchor: top
+                transition: { show: { time: 0s }, hide: { time: 0s } }
+    mz_default_shield:
+        data: { source: mz_default_shield }
+        draw:
+            sdk-shield-overlay:
+                interactive: global.sdk_interactive
+                sprite: |
+                    function() {
+                        if( feature.shield_text ) {
+                            return ('sdk_shield-' + feature.shield_text.length + 'char');
+                        } else {
+                            return ('sdk_shield-' + feature.name.length + 'char');
+                        }
+                    }
+                sprite_default: sdk_shield-1char
+                color: global.sdk_shield_color
+                collide: false
+                transition: { show: { time: 0s }, hide: { time: 0s } }
+                text:
+                    # offset: [0px, -1px]
+                    text_source: |
+                        function() {
+                            if( feature.shield_text ) {
+                                return feature.shield_text;
+                            } else {
+                                return feature.name;
+                            }
+                        }
+                    anchor: center
+                    font:
+                        family: global.text_font_family
+                        fill: global.sdk_shield_text_color
+                        style: bold
+                        size: [[7,7px],[12,8px],[16,11px]]
+
+        width_1char:
+            filter: |
+                function() {
+                    if( feature.shield_text ) {
+                        return (feature.shield_text.length === 1);
+                    } else {
+                        return (feature.name.length === 1);
+                    }
+                }
+            draw:
+                sdk-shield-overlay:
+                    size: [[6,[16px,16px]],[13,[18px,18px]],[16,[21px,21px]]]
+        width_2char:
+            filter: |
+                function() {
+                    if( feature.shield_text ) {
+                        return (feature.shield_text.length === 2);
+                    } else {
+                        return (feature.name.length === 2);
+                    }
+                }
+            draw:
+                sdk-shield-overlay:
+                    size: [[6,[21px,16px]],[13,[24px,18px]],[16,[28px,21px]]]
+        width_3char:
+            filter: |
+                function() {
+                    if( feature.shield_text ) {
+                        return (feature.shield_text.length === 3);
+                    } else {
+                        return (feature.name.length === 3);
+                    }
+                }
+            draw:
+                sdk-shield-overlay:
+                    size: [[6,[27px,16px]],[13,[31px,18px]],[16,[36px,21px]]]
+        width_4char:
+            filter: |
+                function() {
+                    if( feature.shield_text ) {
+                        return (feature.shield_text.length === 4);
+                    } else {
+                        return (feature.name.length === 4);
+                    }
+                }
+            draw:
+                sdk-shield-overlay:
+                    size: [[6,[32px,16px]],[13,[36px,18px]],[16,[41px,21px]]]
+        width_5char:
+            filter: |
+                function() {
+                    if( feature.shield_text ) {
+                        return (feature.shield_text.length === 5);
+                    } else {
+                        return (feature.name.length === 5);
+                    }
+                }
+            draw:
+                sdk-shield-overlay:
+                    size: [[6,[37px,16px]],[13,[41px,18px]],[16,[48px,21px]]]
+        # this is kinda a hack
+        width_longggggg:
+            filter: |
+                function() {
+                    if( feature.shield_text ) {
+                        return (feature.shield_text.length > 5);
+                    } else {
+                        return (feature.name.length > 5);
+                    }
+                }
+            draw:
+                sdk-shield-overlay:
+                    visible: false
+    mz_default_line:
+        data: { source: mz_default_line }
+        draw:
+            sdk-line-overlay:
+                interactive: global.sdk_interactive
+                color: '#06a6d4'
+                order: 503
+                width: 3px
+    mz_default_polygon:
+        data: { source: mz_default_polygon }
+        draw:
+            sdk-polygon-overlay:
+                interactive: global.sdk_interactive
+                color: [0.02,0.65,0.82,0.5]  #'#06b1e2'
+                order: 501
+            sdk-line-overlay:
+                color: '#06a6d4'
+                order: 502
+                width: 0px
+    #    touch:
+    #        data: { source: touch }
+    #        line:
+    #            filter: { type: line }
+    #            draw:
+    #                lines:
+    #                    color: function () { return feature.color || 'black'; }
+    #                    order: 50
+    #                    width: 2px
+    #        poly:
+    #            filter: { type: poly }
+    #            draw:
+    #                polygons:
+    #                    color: magenta
+    #                    order: 40
+    #        point:
+    #            filter: { type: point }
+    #            draw:
+    #                icons:
+    #                    sprite: sunburst
+    #                    collide: false
+    #                    transition: { show: { time: 0s }, hide: { time: 0s } }
+    boundary:
+        data:
+            source: osm
+            layer: boundary
+
+    earth:
+        data: { source: osm }
+        continents:
+            filter: { kind: continent, $geometry: point }
+            draw:
+                text:
+                    priority: 1
+                    font:
+                        family: global.text_font_family
+                        size: 12px
+                        fill: [0, 0, 0, .8]
+                        stroke: { color: white, width: 4 }
+                        transform: uppercase
+
+    landcover:
+        data: { source: osm }
+#        filter:
+#          - { $zoom: { min: 14 } }
+        # - any:
+        #     - { $zoom: { min: 9 }, area: { min: 10000000 } }
+        #     - { $zoom: { min: 10 }, area: { min: 3300000 } }
+        #     - { $zoom: { min: 12 }, area: { min: 1000000 } }
+        #     - { $zoom: { min: 13 }, area: { min: 10000 } }
+        #     - { $zoom: { min: 15 } }
+        #- { area: { min: 500px2 } }
+        areas:
+            draw:
+                polygons:
+                    order: 2
+                    color: '#f2f1f0'
+
+            forest:
+                filter: { class: [wood, natural_wood, grass] }
+                draw:
+                    polygons:
+                        color: global.color_green2
+
+            wetland:
+                filter: { class: [wetland] }
+                draw:
+                    polygons:
+                        color: global.color_wetland
+
+            sand:
+                filter: { class: sand, not: { subclass: beach }  }
+                draw:
+                    polygons:
+                        color: '#f2f1f0'
+            beach:
+                filter: { class: sand, subclass: beach  }
+                draw:
+                    polygons:
+                        color: global.color_beach
+
+    landuse:
+        data: { source: osm }
+        filter:
+          - { $zoom: { min: 14 } }
+          #TODO: 'px2' range unit support for ES, and remove extended any area filter
+        # - any:
+        #     - { $zoom: { min: 9 }, area: { min: 10000000 } }
+        #     - { $zoom: { min: 10 }, area: { min: 3300000 } }
+        #     - { $zoom: { min: 12 }, area: { min: 1000000 } }
+        #     - { $zoom: { min: 13 }, area: { min: 10000 } }
+        #     - { $zoom: { min: 15 } }
+        #- { area: { min: 500px2 } }
+        areas:
+            draw:
+                polygons:
+                    order: 1
+                    color: '#ffffff'
+
+            residential:
+                filter: { class: residential }
+                draw:
+                    polygons:
+                        order: 10
+                        color: [[12, '#ffffff']]
+
+            track:
+                filter: { class: track }
+                draw:
+                    polygons:
+                        order: 20
+                        color: [[12, '#c5e8c5']]
+
+            military:
+                filter: { class: military }
+                draw:
+                    polygons:
+                        order: 30
+                        color: [[12, global.color_military]]
+
+            hospital:
+                filter: { class: hospital }
+                draw:
+                    polygons:
+                        order: 40
+                        color: global.color_hospital
+
+            parks:
+                filter: { class: [park, graveyard, cemetery, forest, recreation_ground] }
+                draw:
+                    polygons:
+                        order: 50
+                        color: global.color_green2
+
+            industry:
+                filter: { class: [commercial, industrial] }
+                draw:
+                    polygons:
+                        order: 60
+                        color: global.color_industrial
+
+            civic:
+                filter: { class: university }
+                draw:
+                    polygons:
+                        order: 70
+                        color: global.color_university
+
+            urban:
+                filter: { class: urban_area }
+                draw:
+                    polygons:
+                        order: 80
+                        # color: [0.902, 0.835, 0.753, 1.00]
+                        #                        color: [[7, lightgrey], [9, [.88, .88, .88]]]
+                        color: '#EAE6E1'
+            sport:
+                filter: { class: [pitch, stadium, playground] }
+                draw:
+                    polygons:
+                        order: 90
+                        # color: [0.902, 0.835, 0.753, 1.00]
+                        #                        color: [[7, lightgrey], [9, [.88, .88, .88]]]
+                        color: global.color_sport
+
+    aeroway:
+        data: { source: osm }
+        filter:
+            - { $zoom: { min: 8 } }
+            #TODO: 'px2' range unit support for ES, and remove extended any area filter
+        # - any:
+        #     - { $zoom: { min: 9 }, area: { min: 10000000 } }
+        #     - { $zoom: { min: 10 }, area: { min: 3300000 } }
+        #     - { $zoom: { min: 12 }, area: { min: 1000000 } }
+        #     - { $zoom: { min: 13 }, area: { min: 10000 } }
+        #     - { $zoom: { min: 15 } }
+        #- { area: { min: 500px2 } }
+        areas:
+            draw:
+                polygons:
+                    order: 1
+#                    color: '#ffffff'
+
+            aerodrome:
+                filter: { class: [aerodrome, airport] }
+                draw:
+                    polygons:
+                        color: [[12, global.color_aerodrome0]]
+
+
+    water:
+        data: { source: osm }
+        draw:
+            polygons:
+                order: global.feature_order
+                color: '#aad9ff'
+        oceans:
+            filter: { class: ocean }
+            visible: true
+            draw:
+                text:
+                    font:
+                        family: global.text_font_family
+                        size: 14pt
+                        style: italic
+        seas:
+            filter: { class: sea, $zoom: { min: 7 } }
+            visible: true
+            draw:
+                text:
+                    font:
+                        family: global.text_font_family
+                        size: 12pt
+                        style: italic
+
+    transportation:
+        data: { source: osm }
+        filter: { not: { class: rail } }
+
+        draw:
+            lines:
+                color: '#ffffff'
+                # color: function() { return [Math.random(), Math.random(), Math.random()] }
+                width: 12
+                order: 210
+                outline:
+                    color: [[16, '#ffffff'], [18, '#ffffff']]
+                    width: [[15, 0], [16, 1]]
+                    order: 210 # put all outlines below all roads
+
+        arrows:
+            # oneway arrows and shields are distinct groups!
+            filter: { $zoom: { min: 16 } }
+            draw:
+                arrows:
+                    style: base_icons_library
+                    flat: true
+                    priority: 3
+                    order: 360
+                    visible: global.icon_visible_arrows
+                    sprite: arrow
+                    color: [0.800,0.800,0.800]
+                    size: [[17, 6px], [20, 14px]]
+                    placement: spaced
+                    placement_spacing: [[17, 70px], [20, 175px]]
+                    angle: auto
+                    text:
+                        visible: false
+
+        rounded:
+            filter: { $zoom: { min: 18 } }
+            draw:
+                lines:
+                    order: 220
+                    cap: round
+
+        trunk:
+            filter: { class: [motorway, trunk] }
+            draw:
+                lines:
+                    order: 230
+                    color: [[5, global.color_trunk_orange], [7, global.color_trunk_orange]]
+                    width: [[5, 1px], [8, 1.5px],[12, 2px], [16, 6px], [17, 8px], [18, 10px]]
+                    outline:
+                        order: 230
+                        color: white
+                        width: [[10, 0], [14, 0.5], [18, 1]]
+            link:
+                filter: { is_link: true }
+                draw:
+                    lines:
+                        order: 230
+                        color: global.color_trunk_orange
+                        width: [[13, 0], [14, 12]]
+
+
+        primary_roads:
+            filter: { class: [primary], $zoom: { min: 10 } }
+            draw:
+                lines:
+                    order: 240
+                    color: global.color_primary_orange
+                    width: [[10, 0], [12, 1px], [13, 2px], [14, 3px], [16, 5px], [17, 7px], [18, 9px]]
+                    outline:
+                        order: 240
+                        color: white
+                        width: [[15, 0.5], [18, 1]]
+
+        secondary_roads:
+            filter: { class: [secondary], $zoom: { min: 12 } }
+            draw:
+                lines:
+                    order: 250
+                    color: global.color_secondary
+                    width: [[10, 0], [12, 1px], [13, 1px], [14, 1.5px], [16, 3px], [17, 5px], [18, 7px]]
+                    outline:
+                        order: 250
+                        color: [[15, '#d1d4d9'], [18, '#d1d4d9']]
+                        width: [[15, 0.5], [18, 1]]
+
+        roads:
+            filter: { class: [tertiary, minor], $zoom: { min: 14 } }
+            draw:
+                lines:
+                    order: 260
+                    color: white
+                    width: [[10, 0], [12, 1px], [13, 1px], [14, 1.5px], [16, 3px], [17, 5px], [18, 7px]]
+                    outline:
+                        order: 260
+                        color: [[15, '#d1d4d9'], [18, '#d1d4d9']]
+                        width: [[15, 0.5], [18, 1]]
+
+        road_small:
+            filter: { class: [path, service, track, raceway], $zoom: { min: 15 } }
+            draw:
+                lines:
+                    order: 270
+                    color: white
+                    width: [[10, 0], [12, 1px], [13, 1px], [14, 1.5px], [16, 3px], [17, 5px], [18, 7px]]
+                    outline:
+                        order: 270
+                        color: [[15, '#d1d4d9'], [18, '#d1d4d9']]
+                        width: [[15, 0.5], [18, 1]]
+            early:
+                filter: { $zoom: { max: 13 } }
+                draw:
+                    lines:
+                        order: 280
+                        outline:
+                            order: 280
+
+        roads_construction:
+            filter: { class: [motorway_construction, trunk_construction, primary_construction, secondary_construction, tertiary_construction, minor_construction, path_construction, service_construction, track_construction, raceway_construction], $zoom: { min: 10 } }
+            draw:
+                lines:
+                    order: 290
+                    color: '#ffffff'
+                    width: [[10, 0], [13, 2px], [14, 2px], [16, 12]]
+                    outline:
+                        order: 290
+                        width: [[15, 0.5], [18, 1]]
+
+
+        paths:
+            filter: { class: path }
+            draw:
+                lines:
+                    order: 300
+                    style: dashed
+                    color: white
+                    width: [[15, 0px], [18, 1px]]
+                    outline:
+                        order: 300
+                        width: 0
+
+            # apply outline to roads intersecting parks - see data source transform example in `sources`
+            land:
+                filter: { intersects_park: true }
+                draw:
+                    lines:
+                        order: 310
+                        outline:
+                            order: 310
+                            style: lines
+                            color: red
+                            width: 1px
+
+        ferry:
+            filter: { class: ferry }
+            draw:
+                lines:
+                    order: 320
+                    style: dashed
+                    color: '#ffffff'
+                    width: [[14, 1px], [18, 2px]]
+                    outline:
+                        order: 320
+                        width: 0
+        airports:
+            filter: { class: aeroway }
+            draw:
+                lines:
+                    order: 330
+                    color: '#ffffff'
+                    outline:
+                        order: 330
+                        width: 0
+
+            taxiways:
+                filter: { class: taxiway }
+                draw:
+                    lines:
+                        order: 340
+                        width: [[13, 0px], [14, 2px], [17, 10px]]
+
+            runways:
+                filter: { subclass: runway }
+                draw:
+                    lines:
+                        order: 350
+                        color: [[13, '#ffffff'], [16, white]]
+                        width: [[11, 3px], [12, 5px], [13, 10px], [15, 75]]
+                        cap: square
+                        outline:
+                            order: 350
+                            color: orange
+                            width: [[15, 0.5], [18, 1]]
+
+
+
+
+    transportation_name:
+        data: { source: osm }
+        labels:
+            # filter: 'function() { print('check!'); return true; }'
+            # name: true
+            # not: { class: [rail, aeroway] }
+            draw:
+                # lines:
+                #     order: 100
+                #     color: '#f00'
+                #     width: 1px
+                text:
+                    interactive: true
+                    transition: { show: { time: 0s }, hide: { time: 1s } }
+                    font:
+                        family: global.text_font_family
+                        fill: '#888888'
+                        size: 12px
+
+            trunk:
+                filter: { class: [motorway, trunk] }
+                draw:
+                    text:
+                        repeat_distance: 200px
+                        repeat_group: road_labels
+                        priority: 2
+                        font:
+                            stroke: { color: white, width: 4 }
+                            transform: capitalize
+
+            primary:
+                filter: { class: primary, $zoom: { min: 13 } }
+                draw:
+                    text:
+                        repeat_distance: 100px
+                        repeat_group: roads
+                        priority: 3
+                        font:
+                            size: 12px
+                            stroke: { color: white, width: 4 }
+
+
+            ferry:
+                filter: { class: ferry }
+                draw:
+                    text:
+                        text_wrap: 20
+                        font:
+                            fill: '#8db3ce'
+                            stroke: { color: white, width: 4px }
+                            style: italic
+
+        shields:
+            filter:
+                all:
+                    -   $zoom: { min: 6 }
+                    #
+                    # United State looks great with shield_text alone, but...
+                    #
+                    #shield_text: true    # some roads don't have shield text, deal with that later
+                    #
+                    # Europe doesn't have many network relations set, so we could look for either
+                    # shield_text or ref (with no shield_text) but...
+                    # that makes United States look a bit funky with `(xxx)` and generic shields
+                    # showing up in fields of custom state shields like US:CA and US:NY
+                    #
+                    - function() { return global.sdk_road_shields; }
+                    -   any:
+                            -   shield_text: true    # some roads don't have shield text, deal with that later
+                            -   all:
+                                    -   shield_text: false    # some roads don't have shield text, deal with that later
+                                    -   ref: true
+                                    -   class: [motorway, trunk, primary, secondary, tertiary]
+            # default
+            draw:
+                mapzen_icon_library:
+                    # you need to match any custom shield to the vector tile `network` values
+                    sprite: |
+                        function() {
+                            if( feature.shield_text ) {
+                                return ('generic_shield-' + feature.shield_text.length + 'char');
+                            } else {
+                                return ('generic_shield-' + feature.ref.length + 'char');
+                            }
+                        }
+                    sprite_default: generic_shield_5char
+                    size: [[7,[50%,50%]],[12,[50%,50%]],[15,[50%,50%]]]
+                    #size: [[6,[14px,14px]],[13,[16px,16px]],[16,[18px,18px]]]
+                    priority: 58
+                    repeat_group: shields
+                    repeat_distance: [[8,90px],[10,40px],[13,30px]]
+                    placement: midpoint
+                    placement_min_length_ratio:
+                        - [8, 0.1]
+                        - [9, 0.25]
+                        - [10, 0.25]
+                        - [11, 0.15]
+                        - [12, 0.25]
+                        - [13, 0.4]
+                        - [14, 0.9]
+                        - [15, 1.5]
+                    cull_from_tile: true
+                    visible: false
+                    text:
+                        offset: [0px, -0.5px]
+                        repeat_distance: 200px
+                        anchor: center
+                        text_source: |
+                            function() {
+                                if( feature.shield_text ) {
+                                    return feature.shield_text;
+                                } else {
+                                    return feature.ref;
+                                }
+                            }
+                        font:
+                            family: Montserrat
+                            #fill: [0.308,0.308,0.308]
+                            weight: 500
+                            fill: [0.320,0.320,0.320]
+                            size: [[7,7px],[12,8px],[16,11px]]
+                            stroke: { width: 0px }
+
+            default_priority_highway:
+                filter:
+                    any:
+                        -   class: motorway
+                draw:
+                    mapzen_icon_library:
+                        priority: 47
+                        #color: yellow
+                        visible: global.sdk_road_shields
+                early:
+                    filter:
+                        -   $zoom: { max: 7 }
+                    draw:
+                        mapzen_icon_library:
+                            visible: false
+
+            default_priority_trunk:
+                filter:
+                    all:
+                        -   class: trunk
+                draw:
+                    mapzen_icon_library:
+                        priority: 48
+                        #color: red
+                        visible: global.sdk_road_shields
+                early:
+                    filter:
+                        -   $zoom: { max: 9 }
+                    draw:
+                        mapzen_icon_library:
+                            visible: false
+            default_priority_primary:
+                filter:
+                    all:
+                        -   class: primary
+                draw:
+                    mapzen_icon_library:
+                        priority: 49
+                        #color: aqua
+                        visible: global.sdk_road_shields
+                early:
+                    filter:
+                        -   $zoom: { max: 10 }
+                    draw:
+                        mapzen_icon_library:
+                            visible: false
+            default_priority_trunk_secondary:
+                filter:
+                    all:
+                        -   class: secondary
+                draw:
+                    mapzen_icon_library:
+                        priority: 53
+                        #color: blue
+                        visible: global.sdk_road_shields
+                early:
+                    filter:
+                        -   $zoom: { max: 12 }
+                    draw:
+                        mapzen_icon_library:
+                            visible: false
+            default_priority_trunk_tertiary:
+                filter:
+                    all:
+                        -   class: tertiary
+                draw:
+                    mapzen_icon_library:
+                        priority: 55
+                        #color: green
+                        visible: global.sdk_road_shields
+                early:
+                    filter:
+                        -   $zoom: { max: 13 }
+                    draw:
+                        mapzen_icon_library:
+                            visible: false
+
+
+    building:
+        data: { source: osm }
+        filter:
+            not:
+                hide_3d: false
+
+        draw:
+            polygons:
+                order: 10 # global.feature_order
+                color: [.99, .99, .99]
+
+        # turn interactive feature selection on for buildings with names
+        interactive:
+            filter: { name: true }
+            draw: { polygons: { interactive: true } }
+
+        # extrude 3d buildings
+#        extruded:
+#            filter:
+#                $zoom: { min: 16 }
+#            draw:
+#                polygons:
+#                    order: 638
+#                    extrude: |
+#                        function () {
+#                          return [feature.render_min_height, feature.render_height ];
+#                        }
+#                    color: "#ffffff"
+#                lines:
+#                    visible: true
+#                    order: 439
+#                    style: building-lines
+#                    color: "#000000"
+#                    extrude: |
+#                        function () {
+#                          return [feature.render_min_height, feature.render_height ];
+#                        }
+#
+#        high-line:
+#            filter: { roof_material: grass }
+#            draw:
+#                polygons:
+#                    style: polygons
+#                    color: '#bddec5'
+#
+#        building_min:
+#            filter:
+#                $zoom: { min: 15, max: 16 }
+#            draw:
+#                polygons:
+#                    order: 10 # global.feature_order
+#                    color: [.99, .99, .99]
+
+    poi:
+        data: { source: osm }
+        draw:
+            maps_icon_library:
+                order: 800
+                visible: global.icon_visible_poi_landuse
+                size: [[13, 14px], [16, 18px], [18, 19px]]
+                sprite: function() { return feature.class; }
+                sprite_default: generic
+                interactive: global.sdk_interactive
+                priority: 65 #function() { return (feature.min_zoom && Math.floor(feature.min_zoom * 1000)) || 65; }
+                repeat_group: abc
+                buffer: 3px
+
+
+#        poi_icons:
+#            filter:
+#                $zoom: { min: 15 }
+#            draw:
+#                maps_icon_library:
+#                    order: 801
+#                    visible: true
+#                    size: [[13, 14px], [16, 18px], [18, 19px]]
+#                    sprite: function() { return feature.class; }
+#                    sprite_default: generic
+#                    interactive: global.sdk_interactive
+#                    priority: 65 #function() { return (feature.min_zoom && Math.floor(feature.min_zoom * 1000)) || 65; }
+#                    repeat_group: abc
+#                    buffer: 3px
+
+        poi_icons_z9:
+            filter:
+                class: [bus_station]
+                $zoom: { min: 9 }
+            draw:
+                maps_icon_library:
+                    order: 801
+                    visible: true
+                    size: [[13, 14px], [16, 18px], [18, 19px]]
+                    sprite: class
+                    sprite_default: generic
+                    interactive: global.sdk_interactive
+                    priority: 65 #function() { return (feature.min_zoom && Math.floor(feature.min_zoom * 1000)) || 65; }
+                    repeat_group: abc
+                    buffer: 3px
+
+
+        poi_icons_z10:
+            filter:
+                subclass: [hospital, muslim]
+                $zoom: { min: 10 }
+            draw:
+                maps_icon_library:
+                    order: 801
+                    visible: true
+                    size: [[13, 14px], [16, 18px], [18, 19px]]
+                    sprite: function() { return feature.subclass; }
+                    sprite_default: generic
+                    interactive: global.sdk_interactive
+                    priority: 65 #function() { return (feature.min_zoom && Math.floor(feature.min_zoom * 1000)) || 65; }
+                    repeat_group: abc
+                    buffer: 3px
+
+
+
+        parking:
+            filter:
+                subclass: [parking]
+                $zoom: { min: 16 }
+            draw:
+                maps_icon_library:
+                    order: 801
+                    visible: true
+                    size: [[13, 14px], [16, 18px], [18, 19px]]
+                    sprite: parking-s
+                    sprite_default: generic
+                    interactive: global.sdk_interactive
+                    priority: 65 #function() { return (feature.min_zoom && Math.floor(feature.min_zoom * 1000)) || 65; }
+                    repeat_group: abc
+                    buffer: 3px
+
+
+
+        poi_icons_subclass:
+            filter:
+                $zoom: { min: 16 }
+            draw:
+                maps_icon_library:
+                    order: 801
+                    visible: true
+                    size: [[13, 14px], [16, 18px], [18, 19px]]
+                    sprite: function() { return feature.subclass; }
+                    sprite_default: generic
+                    interactive: global.sdk_interactive
+                    priority: 65 #function() { return (feature.min_zoom && Math.floor(feature.min_zoom * 1000)) || 65; }
+                    repeat_group: abc
+                    buffer: 3px
+
+
+    boundaries:
+        data: { source: osm }
+        draw:
+            lines:
+                visible: false
+                order: global.feature_order
+                width: 2px
+                color: wheat
+
+        country:
+            filter: { class: country }
+            draw:
+                lines:
+                    visible: true
+                    color: [0.824, 0.651, 0.329, 1.00]
+
+        region:
+            filter: { class: [region, macroregion] }
+            draw:
+                lines:
+                    visible: true
+
+    places:
+        data: { source: osm }
+
+        # city labels with points
+        city-points:
+            filter:
+                class: locality
+                kind_detail: city
+                $zoom: { max: 11 }
+            visible: true
+            draw:
+                points:
+                    size: 8px
+                    color: darkred
+                    text:
+                        priority: 1
+                        font:
+                            family: global.text_font_family
+                            #                            size: 12px
+                            fill: [0, 0, 0, .8]
+                            stroke: { color: white, width: 4 }
+                            transform: uppercase
+                            weight: bold
+                            size: [[8, 11px], [12, 16px]]
+
+        # places w/text-only labels (not accompanying point)
+        text-only:
+            draw:
+                text:
+                    visible: false
+                    priority: 1
+                    font:
+                        family: global.text_font_family
+                        size: 12px
+                        fill: [0, 0, 0, .8]
+                        stroke: { color: white, width: 4 }
+                        transform: uppercase
+
+            countries:
+                filter:
+                    class: country
+                    any:
+                        - { population: { min: 100000000 } }
+                        - { $zoom: { min: 5, max: 8 }, population: { min: 1000000 } }
+                        # - population: { min: 10000000 }
+                draw:
+                    text:
+                        visible: true
+                        font:
+                            weight: bold
+                            size: [[6, 14px], [8, 20px]]
+
+            regions:
+                filter:
+                    class: region
+                    kind_detail: [state, province]
+                    $zoom: { min: 5, max: 9 }
+                draw:
+                    text:
+                        visible: true
+                        font:
+                            # weight: bold
+                            size: [[6, 12px], [8, 16px]]
+
+                # use short name when available at low-zooms
+                short:
+                    filter: { $zoom: { max: 7 } }
+                    draw:
+                        text:
+                            text_source: 'name:short'
+
+            cities:
+                filter:
+                    class: locality
+                    kind_detail: city
+                    $zoom: { min: 11 } # show city point labels below z11
+                draw:
+                    text:
+                        visible: true
+                        font:
+                            weight: bold
+                            size: [[8, 11px], [12, 16px]]
+
+            neighborhoods:
+                filter:
+                    - { class: [neighbourhood, macrohood], $zoom: { min: 13 } }
+                    - { class: microhood, $zoom: { min: 15 } }
+                draw:
+                    text:
+                        visible: true
+                        font:
+                            size: [[13, 11px], [14, 11px], [15, 13px]]
+                            style: italic
+                            fill: rgba(136, 45, 23, 0.9)
+
+    transit:
+        data: { source: osm }
+        filter: { $zoom: { min: 16 } }
+        draw:
+            lines:
+                style: transit-lines
+                order: 400
+                color: gray
+                width: 6px
+                outline:
+                    color: [.8, .8, .8]
+                    width: 1px
+                interactive: true
+
+        colored:
+            filter: { colour: true }
+            draw:
+                lines:
+                    color: function() { return feature.colour; }
